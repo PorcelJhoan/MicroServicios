@@ -1,0 +1,43 @@
+POST http://localhost:9194/v1/api/customer/save
+Content-Type: application/json
+
+{
+  "name":"Jhoan ",
+  "lasName": "Porcel",
+  "email": "jhoan.porcel6@gmail.com"
+}
+
+###
+POST http://localhost:8283/ms-customer/v1/api/customer/save
+Content-Type: application/json
+
+{
+  "name":"Jhoan ",
+  "lasName": "Porcel",
+  "email": "jhoan.porcel6@gmail.com"
+}
+
+###
+GET http://localhost:8283/ms-customer/v1/api/customer/test
+Accept: application/json
+###
+
+GET http://localhost:9092/v1/api/customer/all
+Accept: application/json
+###
+GET http://localhost:8283/ms-customer/v1/api/customer?idcustomer=1
+Accept: application/json
+###
+
+###
+POST http://localhost:8283/ms-account/v1/api/account/save
+Content-Type: application/json
+
+{
+  "login":"Jhoan2q34 ",
+  "password": "Porcel234234"
+}
+###
+GET http://localhost:8283/ms-account/v1/api/account?idcustomer=1
+Accept: application/json
+###

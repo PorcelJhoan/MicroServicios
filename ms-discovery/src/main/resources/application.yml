@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ms-discovery
+server:
+  port: 8761
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 500
+    response-cache-update-interval-ms: 500 #default 30000
+    use-read-only-response-cache: false
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
