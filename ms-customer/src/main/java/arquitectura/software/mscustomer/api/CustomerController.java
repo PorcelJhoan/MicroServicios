@@ -17,8 +17,8 @@ public class CustomerController {
     @Autowired
     private CustomerRepository customerRepository;
 
-    @Value("${server.port}")
-    private String serverPort;
+  //  @Value("${server.port}")
+//    private String serverPort;
 
     @RequestMapping(path = "/test",method = RequestMethod.GET)
     public String testCustomer(){
@@ -27,7 +27,7 @@ public class CustomerController {
 
     @RequestMapping(path = "/save",method = RequestMethod.POST)
     public CustomerEntity saveCustomer(@RequestBody CustomerEntity customer){
-        System.out.println("Registrado : "+ serverPort);
+  //      System.out.println("Registrado : "+ serverPort);
         return customerRepository.save(customer);
     }
 
