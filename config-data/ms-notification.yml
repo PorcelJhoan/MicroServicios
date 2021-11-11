@@ -1,11 +1,11 @@
 spring:
   application:
-    name: ms-customer
+    name: ms-notification
   h2:
     console:
       enabled: true
 server:
-  port: 9091
+  port: 8150
 eureka:
   server:
     enable-self-preservation: false
