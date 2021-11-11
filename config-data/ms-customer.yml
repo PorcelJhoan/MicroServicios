@@ -5,7 +5,7 @@ spring:
     console:
       enabled: true
 server:
-  port: 9099
+  port: 9999
 eureka:
   server:
     enable-self-preservation: false
