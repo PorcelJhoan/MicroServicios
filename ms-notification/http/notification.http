@@ -1,43 +1,43 @@
-POST http://localhost:9194/v1/api/customer/save
+### NOTIFICACION CORREO PUERTO NOTIFICATION
+POST http://localhost:8150/v1/api/notification/correo
 Content-Type: application/json
 
 {
-  "name":"Jhoan ",
-  "lasName": "Porcel",
-  "email": "jhoan.porcel6@gmail.com"
+  "notificacion": "Notificacion 1",
+  "usuarioId":1,
+  "correo": "Correo@gmail.com"
 }
 
-###
-POST http://localhost:8283/ms-customer/v1/api/customer/save
+### NOTIFICACION SMS PUERTO NOTIFICATION
+POST http://localhost:8150/v1/api/notification/sms
 Content-Type: application/json
 
 {
-  "name":"Jhoan ",
-  "lasName": "Porcel",
-  "email": "jhoan.porcel6@gmail.com"
+  "notificacion": "Notificacion 1",
+  "usuarioId":1,
+  "telefono": "+519 78789484"
 }
 
-###
-GET http://localhost:8283/ms-customer/v1/api/customer/test
-Accept: application/json
-###
+### NOTIFICACION CORREO PUERTO GATEWAY
 
-GET http://localhost:9092/v1/api/customer/all
-Accept: application/json
-###
-GET http://localhost:8283/ms-customer/v1/api/customer?idcustomer=1
-Accept: application/json
-###
-
-###
-POST http://localhost:8283/ms-account/v1/api/account/save
+POST http://localhost:8283/ms-notification/v1/api/notification/correo
 Content-Type: application/json
 
 {
-  "login":"Jhoan2q34 ",
-  "password": "Porcel234234"
+  "notificacion": "Notificacion 1",
+  "usuarioId":1,
+  "correo": "Correo@gmail.com"
 }
+
+### NOTIFICACION SMS PUERTO GATEWAY
+POST http://localhost:8283/ms-notification/v1/api/notification/sms
+Content-Type: application/json
+
+{
+  "notificacion": "Notificacion 1",
+  "usuarioId":1,
+  "telefono": "+519 78789484"
+}
+
 ###
-GET http://localhost:8283/ms-account/v1/api/account?idcustomer=1
-Accept: application/json
-###
+

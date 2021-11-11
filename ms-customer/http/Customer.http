@@ -1,4 +1,5 @@
-POST http://localhost:9194/v1/api/customer/save
+# REGISTRAR CLIENTE PUERTO CUSTOMER
+POST http://localhost:9091/v1/api/customer/save
 Content-Type: application/json
 
 {
@@ -7,7 +8,18 @@ Content-Type: application/json
   "email": "jhoan.porcel6@gmail.com"
 }
 
-###
+### OBTENER TODOS LOS CLIENTES PUERTO CUSTOMER
+
+GET http://localhost:9091/v1/api/customer/all
+Accept: application/json
+
+### OBTENER INFORMACIÓN DE UN CLIENTE PUERTO CUSTOMER
+
+GET http://localhost:9091/v1/api/customer?idcustomer=1
+Accept: application/json
+
+### REGISTRAR CLIENTE PUERTO GATEWAY
+
 POST http://localhost:8283/ms-customer/v1/api/customer/save
 Content-Type: application/json
 
@@ -17,27 +29,15 @@ Content-Type: application/json
   "email": "jhoan.porcel6@gmail.com"
 }
 
-###
-GET http://localhost:8283/ms-customer/v1/api/customer/test
-Accept: application/json
-###
+### OBTENER TODOS LOS CLIENTES PUERTO GATEWAY
 
-GET http://localhost:9092/v1/api/customer/all
+GET http://localhost:8283/ms-customer/v1/api/customer/all
 Accept: application/json
-###
+
+### OBTENER INFORMACIÓN DE UN CLIENTE PUERTO GATEWAY
+
 GET http://localhost:8283/ms-customer/v1/api/customer?idcustomer=1
 Accept: application/json
-###
 
 ###
-POST http://localhost:8283/ms-account/v1/api/account/save
-Content-Type: application/json
 
-{
-  "login":"Jhoan2q34 ",
-  "password": "Porcel234234"
-}
-###
-GET http://localhost:8283/ms-account/v1/api/account?idcustomer=1
-Accept: application/json
-###

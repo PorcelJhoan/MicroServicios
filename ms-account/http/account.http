@@ -1,0 +1,41 @@
+
+### REGISTRAR CUENTA PUERTO GATEWAY
+
+POST http://localhost:8283/ms-account/v1/api/account/save
+Content-Type: application/json
+
+{
+  "login":"Jhoan2q34 ",
+  "password": "Porcel234234"
+}
+
+### CONSULTAR CUENTA PUERTO GATEWAY
+
+GET http://localhost:8283/ms-account/v1/api/account?idcustomer=1
+Accept: application/json
+
+### INFORMACIÓN CUENTA
+
+GET http://localhost:8283/ms-account/v1/api/account/all
+Accept: application/json
+
+### REGISTRAR CUENTA PUERTO ACCOUNT
+
+POST http://localhost:7575/v1/api/account/save
+Content-Type: application/json
+
+{
+  "login":"Jhoan2q34 ",
+  "password": "Porcel234234"
+}
+
+### CONSULTAR CUENTA PUERTO ACCOUNT
+
+GET http://localhost:7575/v1/api/account?idcustomer=1
+Accept: application/json
+
+### INFORMACIÓN CUENTA PUERTO ACCOUNT
+
+GET http://localhost:7575/v1/api/account/all
+Accept: application/json
+###

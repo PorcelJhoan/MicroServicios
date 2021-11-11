@@ -4,32 +4,33 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 @Entity
-public class NotificationSmsEntity {
+public class NotificationCorreoEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer NotificacionSmsId;
+    private Integer NotificacionCorreoId;
     private String Notificacion;
     private Integer UsuarioId;
-    private String Telefono;
+    private String correo;
 
-    public NotificationSmsEntity(Integer notificacionCorreoId, String notificacion, Integer usuarioId, String telefono) {
-
-        NotificacionSmsId = notificacionCorreoId;
+    public NotificationCorreoEntity(Integer notificacionCorreoId, String notificacion, Integer usuarioId, String correo) {
+        NotificacionCorreoId = notificacionCorreoId;
         Notificacion = notificacion;
         UsuarioId = usuarioId;
-        Telefono = telefono;
+        this.correo = correo;
     }
 
-    public NotificationSmsEntity() {
+    public NotificationCorreoEntity() {
+
     }
 
     public Integer getNotificacionCorreoId() {
-        return NotificacionSmsId;
+        return NotificacionCorreoId;
     }
 
     public void setNotificacionCorreoId(Integer notificacionCorreoId) {
-        NotificacionSmsId = notificacionCorreoId;
+        NotificacionCorreoId = notificacionCorreoId;
     }
 
     public String getNotificacion() {
@@ -48,11 +49,11 @@ public class NotificationSmsEntity {
         UsuarioId = usuarioId;
     }
 
-    public String getTelefono() {
-        return Telefono;
+    public String getCorreo() {
+        return correo;
     }
 
-    public void setTelefono(String telefono) {
-        Telefono = telefono;
+    public void setCorreo(String correo) {
+        this.correo = correo;
     }
 }
