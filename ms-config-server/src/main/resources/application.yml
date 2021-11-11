@@ -5,9 +5,8 @@ spring:
     config:
       server:
         git:
-          default-label: main
           uri: https://github.com/PorcelJhoan/MicroServicios
+          default-label: main
           search-paths: config-data
-
 server:
   port: 8888
