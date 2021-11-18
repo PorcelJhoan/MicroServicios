@@ -1,0 +1,9 @@
+version: "2.4"
+services:
+  ms-customer:
+    image: ms-customer:0.0.2
+    mem_limit: 150m
+    ports:
+    - "9091:9091"
+    environment:
+      - "EUREKA_URI=http://192.168.32.1:8761/eureka"

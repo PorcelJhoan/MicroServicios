@@ -1,5 +1,9 @@
 # REGISTRAR CLIENTE PUERTO CUSTOMER
-POST http://localhost:9091/v1/api/customer/save
+POST http://localhost:9091/actuator/refresh
+
+###
+# REGISTRAR CLIENTE PUERTO CUSTOMER
+POST http://192.168.1.7:9092/v1/api/customer/save
 Content-Type: application/json
 
 {
@@ -10,7 +14,7 @@ Content-Type: application/json
 
 ### OBTENER TODOS LOS CLIENTES PUERTO CUSTOMER
 
-GET http://localhost:9091/v1/api/customer/all
+GET http://localhost:9091/v1/api/customer/test
 Accept: application/json
 
 ### OBTENER INFORMACIÓN DE UN CLIENTE PUERTO CUSTOMER
@@ -31,7 +35,7 @@ Content-Type: application/json
 
 ### OBTENER TODOS LOS CLIENTES PUERTO GATEWAY
 
-GET http://localhost:8283/ms-customer/v1/api/customer/all
+GET http://localhost:8283/ms-customer/v1/api/customer/test
 Accept: application/json
 
 ### OBTENER INFORMACIÓN DE UN CLIENTE PUERTO GATEWAY
