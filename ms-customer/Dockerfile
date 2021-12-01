@@ -4,7 +4,8 @@ RUN apt update
 #COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
 #COPY ${DEPENDENCY}/META-INF /app/META-INFO
 #COPY ${DEPENDENCY}/BOOT-INF/classes /app
-
+RUN mkdir -p /opt/arquitectura/logs
+VOLUME /opt/arquitectura/logs
 COPY target/ms-customer-0.0.1.jar ms-customerC-0.0.1.jar
 #ENV SPRING_PROFILE local
 ENV PORT 9091

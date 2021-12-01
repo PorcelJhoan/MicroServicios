@@ -1,9 +1,34 @@
 version: "2.4"
+networks:
+  software:
+    name: network-projects
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.30.0.0/16
+          gateway: 172.30.0.1
+
 services:
   ms-discovery:
     image: ms-discovery:0.0.1
     mem_limit: 150m
     ports:
-    - "9091:9091"
+      - "8762:8762"
+    networks:
+      - software
+  #      environment:
+  #        - "EUREKA_URI=http://192.168.1.2:8762/eureka"
+  ms-config-server:
+    image: ms-config-server:0.0.1
+    mem_limit: 200m
+    networks:
+      - software
+    #  ports:
+    #    - "6945:6945"
     environment:
-      - "EUREKA_URI=http://192.168.1.2:8761/eureka"
+      - "EUREKA_URI=http://192.168.1.2:8762/eureka"
+    volumes:
+      - "/opt/local/logs:/opt/arquitectura/logs"
+    depends_on:
+      ms-discovery:
+        condition: service_started
